@@ -19,6 +19,14 @@
                         `;
                         index = (index + 1) % json.length;
                         //why do we do json.length?
+                        //div loads first, then index is updated - so if json[0] appears, index is actualy 1 by the end of the script
+                        /* this is probably what I'd do...
+                        if(index < json.length){
+                            index += 1;
+                        } else {
+                            index = 0;
+                        }
+                        */
                     });
                 });
             });
